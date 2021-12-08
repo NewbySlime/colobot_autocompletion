@@ -153,8 +153,6 @@ namespace object{
     bool operator==(point p2);
   };
 
-  class object;
-
   class object{
     public:
       object();
