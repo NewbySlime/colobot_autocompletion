@@ -171,6 +171,16 @@ namespace object{
         
   };
 
+  class file{
+    public:
+      void open(string str, string mode);
+      void close();
+      void writeln(string str);
+      string readln();
+      bool eof();
+      void deletefile(string filename);
+  };
+
   typedef std::string string;
   extern void main();
 
@@ -270,8 +280,24 @@ namespace object{
   float strval(string str);
   string strupper(string str);
   string strlower(string str);
+
+  float rand();
+  float pow(float x, float y);
+  float sqrt(float val);
+  float floor(float val);
+  float ceil(float val);
+  float round(float val);
+  float trunc(float val);
+  float sin(float angle);
+  float cos(float angle);
+  float tan(float angle);
+  float asin(float val);
+  float acos(float val);
+  float atan(float val);
+  float atan2(float y, float x);
 };
 
+#define not !
 #define goto goto_
 #define extends :
 #define super this
