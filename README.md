@@ -2,7 +2,7 @@
 
 This is a cpp header files to make cbot available to use with intellisense. Adding some functions and defined macros for autocompletion and error checking by intellisense based on cpp.
 
-Note: since cbot is not entirely cpp, some to be expected work differently. Errors might be annoying for now.
+Note: since cbot is not entirely cpp, some to be expected work differently. Errors related to cpp might be annoying for now.
 
 ## Preparation
 
