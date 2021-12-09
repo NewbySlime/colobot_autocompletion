@@ -1,5 +1,31 @@
 #include <string>
 
+#ifdef __INTELLISENSE__
+  // occurs on using array in different way
+  // incomplete type is not allowed
+  #pragma diag_suppress 70
+
+  // occurs on using array in different way
+  // an array may not have elements of this type
+  #pragma diag_suppress 98
+
+  // occurs on using array in different way
+  // expression must be a modifiable lvalue
+  #pragma diag_suppress 137
+
+  // occurs on using array in different way
+  // variable "x" has an unitialized const or reference member
+  #pragma diag_suppress 369
+
+  // occurs on using array in different way
+  // initialization with '{...}' expected for aggregate object
+  #pragma diag_suppress 520
+
+  // occurs on assignment in while() parameter
+  // expression must have arithmaetic, unscoped enum, o pointer type but has type 'void'
+  #pragma diag_suppress 3362
+#endif
+
 #define Any 0
 
 //might need any changes if needed
@@ -157,6 +183,13 @@ namespace object{
     public:
       object();
       void operator=(object o);
+      void operator=(object *o);
+
+      bool operator!=(object o);
+      bool operator!=(object *o);
+
+      bool operator==(object o);
+      bool operator==(object *o);
 
       const int category, team;
       const point position, velocity;
@@ -307,3 +340,4 @@ namespace object{
 #define private
 #define protected
 #define synchronized
+#define null NULL
