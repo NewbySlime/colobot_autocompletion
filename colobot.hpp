@@ -156,6 +156,8 @@ namespace object{
   class object{
     public:
       object();
+      void operator=(object o);
+
       const int category, team;
       const point position, velocity;
       const object &energyCell, &load;
@@ -192,13 +194,13 @@ namespace object{
   bool detect(int cat);
   bool detect(int *cat);
   
-  object radar(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
-  object radar(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
+  //object radar(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
+  //object radar(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
   object radar(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter[] = new int[1]{Any});
   object radar(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter[] = new int[1]{Any});
 
-  object *radarall(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
-  object *radarall(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
+  //object *radarall(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
+  //object *radarall(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter = Any);
   object *radarall(int cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter[] = new int[1]{Any});
   object *radarall(int *cat, float angle = 0, float focus = 360, float min = 0, float max = 1000, float sens = 1, int filter[] = new int[1]{Any});
 
